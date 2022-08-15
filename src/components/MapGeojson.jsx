@@ -1,6 +1,7 @@
 import React from "react";
 import { Map, TileLayer} from "react-leaflet";
 import GeojsonLayer from './GeojsonLayer';
+import Province from './Province'
 import '../css/Map.css';
 
 class MapComponent extends React.Component {
@@ -9,6 +10,12 @@ class MapComponent extends React.Component {
     lng: 100.6,
     zoom: 6.5,
   };
+
+  provinceInput = (lat) => {
+    this.setState({
+      lat: lat,
+    });
+  }
 
   render() {
     var center = [this.state.lat, this.state.lng];
@@ -21,6 +28,7 @@ class MapComponent extends React.Component {
           url={basemapsDict[this.state.basemap]}
         /> */}      
         <GeojsonLayer url="thailand.json" />
+        <Province input={this.provinceInput} />
       </Map>
     );
   }
