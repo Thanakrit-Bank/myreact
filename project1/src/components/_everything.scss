@@ -1,0 +1,14 @@
+@use "@react-md/theme/dist/color-palette" as *;
+// Note: Outside of codesandbox, this can be `@forward "react-md" with (`
+
+// @forward "react-md/dist/everything" with (
+//   $rmd-theme-light: true,
+//   $rmd-theme-primary: $rmd-teal-500,
+//   $rmd-theme-secondary: $rmd-pink-a-200,
+// );
+
+@forward "react-md" with (
+  $rmd-theme-light: true,
+  $rmd-theme-primary: $rmd-teal-500,
+  $rmd-theme-secondary: $rmd-pink-a-200,
+);
